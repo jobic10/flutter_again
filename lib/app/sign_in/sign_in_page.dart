@@ -39,8 +39,8 @@ Widget _buildContent() {
         SignInButton(
           text: 'Sign in with Google',
           onPressed: () {},
-          backColor: Colors.white,
-          foreColor: Colors.black87,
+          foreColor: Colors.white,
+          backColor: Color(0xFFBB3311),
         ),
         SizedBox(
           height: 8,
@@ -48,8 +48,8 @@ Widget _buildContent() {
         SignInButton(
           text: 'Sign in with Facebook',
           onPressed: () {},
-          backColor: Colors.white,
-          foreColor: Color(0xFF334D92),
+          foreColor: Colors.white,
+          backColor: Color(0xFF334D92),
         ),
       ],
       crossAxisAlignment: CrossAxisAlignment.stretch,
