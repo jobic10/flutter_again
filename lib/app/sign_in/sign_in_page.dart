@@ -39,9 +39,10 @@ Widget _buildContent() {
         ),
         SignInButton(
           text: 'Sign in with Google',
+          imagePath: 'asset/images/gmail.png',
           onPressed: () {},
-          foreColor: Colors.white,
-          backColor: Color(0xFFBB3311),
+          backColor: Colors.white,
+          foreColor: Color(0xFFBB3311),
         ),
         SizedBox(
           height: 8,
