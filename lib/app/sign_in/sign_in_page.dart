@@ -59,7 +59,7 @@ Widget _buildContent() {
           text: 'Sign in with Email',
           onPressed: () {},
           foreColor: Colors.white,
-          backColor: Colors.teal,
+          backColor: Colors.teal.shade400,
         ),
         SizedBox(
           height: 8,
@@ -76,7 +76,7 @@ Widget _buildContent() {
           text: 'Go Anonymous',
           onPressed: () {},
           foreColor: Colors.white,
-          backColor: Colors.lime,
+          backColor: Colors.lime.shade400,
         ),
       ],
       crossAxisAlignment: CrossAxisAlignment.stretch,
