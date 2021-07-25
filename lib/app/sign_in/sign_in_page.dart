@@ -22,11 +22,12 @@ Widget _buildContent() {
     ),
     child: Column(
       children: <Widget>[
-        Container(
-          color: Colors.green,
-          child: SizedBox(
-            width: 100,
-            height: 100,
+        Text(
+          'Sign In',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.w600,
           ),
         ),
         SizedBox(
