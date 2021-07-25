@@ -7,28 +7,32 @@ class CustomButton extends StatelessWidget {
   final double borderRadius;
   final VoidCallback onPressed;
 
-  const CustomButton(
-      {required this.child,
-      required this.foreColor,
-      required this.backColor,
-      this.borderRadius = 16,
-      required this.onPressed});
+  const CustomButton({
+    required this.child,
+    required this.foreColor,
+    required this.backColor,
+    this.borderRadius = 16,
+    required this.onPressed,
+  });
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ButtonStyle(
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(borderRadius),
+    return SizedBox(
+      height: 50,
+      child: ElevatedButton(
+        style: ButtonStyle(
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(borderRadius),
+                ),
               ),
             ),
-          ),
-          elevation: MaterialStateProperty.all(4),
-          backgroundColor: MaterialStateProperty.all(backColor),
-          foregroundColor: MaterialStateProperty.all(foreColor)),
-      onPressed: onPressed,
-      child: child,
+            elevation: MaterialStateProperty.all(4),
+            backgroundColor: MaterialStateProperty.all(backColor),
+            foregroundColor: MaterialStateProperty.all(foreColor)),
+        onPressed: onPressed,
+        child: child,
+      ),
     );
   }
 }
