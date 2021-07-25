@@ -29,12 +29,18 @@ Widget _buildContent() {
             height: 100,
           ),
         ),
+        SizedBox(
+          height: 8,
+        ),
         Container(
           color: Colors.orange,
           child: SizedBox(
             width: 100,
             height: 100,
           ),
+        ),
+        SizedBox(
+          height: 8,
         ),
         Container(
           color: Colors.blue,
@@ -43,8 +49,12 @@ Widget _buildContent() {
             height: 100,
           ),
         ),
+        SizedBox(
+          height: 8,
+        ),
       ],
       crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisAlignment: MainAxisAlignment.center,
     ),
   );
 }
