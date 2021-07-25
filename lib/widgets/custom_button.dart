@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
+  final Widget child;
+  final Color backColor;
+  final Color foreColor;
+  final double borderRadius;
+  final VoidCallback onPressed;
+
+  const CustomButton(
+      {required this.child,
+      required this.foreColor,
+      required this.backColor,
+      this.borderRadius = 16,
+      required this.onPressed});
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -8,17 +20,15 @@ class CustomButton extends StatelessWidget {
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
-                Radius.circular(16),
+                Radius.circular(borderRadius),
               ),
             ),
           ),
           elevation: MaterialStateProperty.all(4),
-          backgroundColor: MaterialStateProperty.all(Colors.white),
-          foregroundColor: MaterialStateProperty.all(Colors.black87)),
-      onPressed: () {
-        print('Button Pressed');
-      },
-      child: Text('Sign in with Google'),
+          backgroundColor: MaterialStateProperty.all(backColor),
+          foregroundColor: MaterialStateProperty.all(foreColor)),
+      onPressed: onPressed,
+      child: child,
     );
   }
 }

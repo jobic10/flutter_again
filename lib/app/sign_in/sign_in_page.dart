@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_again/widgets/custom_button.dart';
+import 'package:flutter_again/app/sign_in/sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -31,7 +31,12 @@ Widget _buildContent() {
             fontWeight: FontWeight.w600,
           ),
         ),
-        CustomButton(),
+        SignInButton(
+          text: 'Sign',
+          onPressed: () {},
+          backColor: Colors.white,
+          foreColor: Colors.black87,
+        ),
         SizedBox(
           height: 8,
         ),
