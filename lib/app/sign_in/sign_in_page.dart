@@ -32,6 +32,13 @@ Widget _buildContent() {
         ),
         ElevatedButton(
           style: ButtonStyle(
+              shape: MaterialStateProperty.all(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(16),
+                  ),
+                ),
+              ),
               elevation: MaterialStateProperty.all(4),
               backgroundColor: MaterialStateProperty.all(Colors.white),
               foregroundColor: MaterialStateProperty.all(Colors.black87)),
