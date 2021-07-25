@@ -30,25 +30,9 @@ Widget _buildContent() {
             fontWeight: FontWeight.w600,
           ),
         ),
-        SizedBox(
-          height: 8,
-        ),
-        Container(
-          color: Colors.orange,
-          child: SizedBox(
-            width: 100,
-            height: 100,
-          ),
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        Container(
-          color: Colors.blue,
-          child: SizedBox(
-            width: 100,
-            height: 100,
-          ),
+        ElevatedButton(
+          onPressed: null,
+          child: Text('Sign in with Google'),
         ),
         SizedBox(
           height: 8,
