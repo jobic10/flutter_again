@@ -26,7 +26,7 @@ Widget _buildContent() {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(
-            bottom: 8,
+            bottom: 48,
           ),
           child: Text(
             'Sign In',
