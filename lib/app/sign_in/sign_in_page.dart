@@ -9,6 +9,7 @@ class SignInPage extends StatelessWidget {
         centerTitle: true,
         elevation: 2,
       ),
+      backgroundColor: Colors.grey[200],
       body: _buildContent(),
     );
   }
@@ -33,7 +34,7 @@ Widget _buildContent() {
           style: ButtonStyle(
               elevation: MaterialStateProperty.all(4),
               backgroundColor: MaterialStateProperty.all(Colors.white),
-              foregroundColor: MaterialStateProperty.all(Colors.black)),
+              foregroundColor: MaterialStateProperty.all(Colors.black87)),
           onPressed: () {
             print('Button Pressed');
           },
