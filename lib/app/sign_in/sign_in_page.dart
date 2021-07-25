@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_again/widgets/custom_button.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -30,23 +31,7 @@ Widget _buildContent() {
             fontWeight: FontWeight.w600,
           ),
         ),
-        ElevatedButton(
-          style: ButtonStyle(
-              shape: MaterialStateProperty.all(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(16),
-                  ),
-                ),
-              ),
-              elevation: MaterialStateProperty.all(4),
-              backgroundColor: MaterialStateProperty.all(Colors.white),
-              foregroundColor: MaterialStateProperty.all(Colors.black87)),
-          onPressed: () {
-            print('Button Pressed');
-          },
-          child: Text('Sign in with Google'),
-        ),
+        CustomButton(),
         SizedBox(
           height: 8,
         ),
