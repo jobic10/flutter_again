@@ -15,8 +15,7 @@ class SignInPage extends StatelessWidget {
 }
 
 Widget _buildContent() {
-  return Container(
-    color: Colors.yellow,
+  return Padding(
     padding: EdgeInsets.all(
       16.0,
     ),
@@ -31,7 +30,9 @@ Widget _buildContent() {
           ),
         ),
         ElevatedButton(
-          onPressed: null,
+          onPressed: () {
+            print('Button Pressed');
+          },
           child: Text('Sign in with Google'),
         ),
         SizedBox(
