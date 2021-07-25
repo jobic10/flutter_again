@@ -9,14 +9,17 @@ class SignInPage extends StatelessWidget {
         centerTitle: true,
         elevation: 2,
       ),
-      body: buildContent(),
+      body: _buildContent(),
     );
   }
 }
 
-Widget buildContent() {
+Widget _buildContent() {
   return Container(
     color: Colors.yellow,
+    padding: EdgeInsets.all(
+      16.0,
+    ),
     child: Column(
       children: <Widget>[
         Container(
