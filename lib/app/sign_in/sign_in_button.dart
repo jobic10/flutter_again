@@ -14,20 +14,18 @@ class SignInButton extends CustomButton {
                 ? Text(
                     text,
                   )
-                : Row(
-                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                        Expanded(
-                          flex: 1,
-                          child: Image.asset(imagePath),
-                        ),
-                        Expanded(
-                          flex: 2,
-                          child: Text(
-                            text,
-                          ),
-                        )
-                      ]),
+                : Row(children: [
+                    Expanded(
+                      flex: 1,
+                      child: Image.asset(imagePath),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Text(
+                        text,
+                      ),
+                    )
+                  ]),
             foreColor: foreColor,
             backColor: backColor,
             onPressed: onPressed);

@@ -49,9 +49,10 @@ Widget _buildContent() {
         ),
         SignInButton(
           text: 'Sign in with Facebook',
+          imagePath: 'asset/images/facebook.png',
           onPressed: () {},
           foreColor: Colors.white,
-          backColor: Color(0xFF334D92),
+          backColor: Color(0xFF304D90),
         ),
         SizedBox(
           height: 8,
