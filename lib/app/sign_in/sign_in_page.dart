@@ -23,22 +23,33 @@ Widget _buildContent() {
     ),
     child: Column(
       children: <Widget>[
-        Text(
-          'Sign In',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.w600,
+        Padding(
+          padding: const EdgeInsets.only(
+            bottom: 8,
+          ),
+          child: Text(
+            'Sign In',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 32,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         SignInButton(
-          text: 'Sign',
+          text: 'Sign in with Google',
           onPressed: () {},
           backColor: Colors.white,
           foreColor: Colors.black87,
         ),
         SizedBox(
           height: 8,
+        ),
+        SignInButton(
+          text: 'Sign in with Facebook',
+          onPressed: () {},
+          backColor: Colors.white,
+          foreColor: Color(0xFF334D92),
         ),
       ],
       crossAxisAlignment: CrossAxisAlignment.stretch,
