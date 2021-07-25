@@ -30,6 +30,10 @@ Widget _buildContent() {
           ),
         ),
         ElevatedButton(
+          style: ButtonStyle(
+              elevation: MaterialStateProperty.all(4),
+              backgroundColor: MaterialStateProperty.all(Colors.white),
+              foregroundColor: MaterialStateProperty.all(Colors.black)),
           onPressed: () {
             print('Button Pressed');
           },
