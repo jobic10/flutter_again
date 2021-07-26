@@ -6,7 +6,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Time Tracker'),
+        title: Text('Dear Mother'),
         centerTitle: true,
         elevation: 2,
       ),
@@ -78,14 +78,16 @@ Widget _buildContent(BuildContext context) {
           onPressed: () async {
             var result = await Navigator.of(context)
                 .pushNamed('/second', arguments: 'I am coming!');
-            showDialog(
-              context: context,
-              builder: (context) => AlertDialog(
-                title: Text(
-                  result.toString(),
+            if (result is String) {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text(
+                    result,
+                  ),
                 ),
-              ),
-            );
+              );
+            }
           },
           foreColor: Colors.white,
           backColor: Colors.lime.shade400,
