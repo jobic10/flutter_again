@@ -10,7 +10,28 @@ class ExpandPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Working With Expanded'),
       ),
-      body: Container(color: Colors.blue.shade200, child: Text(data)),
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              color: Colors.green,
+              height: 200,
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: Colors.white,
+              height: 200,
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: Colors.green,
+              height: 200,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
