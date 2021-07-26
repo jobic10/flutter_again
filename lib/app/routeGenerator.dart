@@ -9,7 +9,10 @@ class RouteGenerator {
       case '/':
         return MaterialPageRoute(builder: (_) => SignInPage());
       case '/second':
-        return MaterialPageRoute(builder: (_) => ExpandPage());
+        if (args is String)
+          return MaterialPageRoute(builder: (_) => ExpandPage(data: args));
+        return MaterialPageRoute(builder: (_) => ErrorRoute());
+
       default:
         return MaterialPageRoute(builder: (_) => ErrorRoute());
     }
