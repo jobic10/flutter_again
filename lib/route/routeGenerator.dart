@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../app/day1/expanded.dart';
 import '../app/day1/stack_and_positioned.dart';
+import '../app/day1/expanded2.dart';
 import '../app/sign_in/sign_in_page.dart';
 import 'routeConstant.dart';
 
@@ -16,7 +17,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => ErrorRoute());
       case Routes.stackPage:
         return MaterialPageRoute(builder: (_) => StackAndPosition());
-
+      case Routes.expandedPage2:
+        return MaterialPageRoute(builder: (_) => ExpandedAssignment());
       default:
         return MaterialPageRoute(builder: (_) => ErrorRoute());
     }

@@ -78,7 +78,7 @@ Widget _buildContent(BuildContext context) {
           text: 'Go Anonymous',
           onPressed: () async {
             var result = await Navigator.of(context)
-                .pushNamed(Routes.stackPage, arguments: 'I am coming!');
+                .pushNamed(Routes.expandedPage2, arguments: 'I am coming!');
             if (result is String) {
               showDialog(
                 context: context,
