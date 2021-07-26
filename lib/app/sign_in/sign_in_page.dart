@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_again/app/sign_in/sign_in_button.dart';
+import 'package:flutter_again/route/routeConstant.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -77,7 +78,7 @@ Widget _buildContent(BuildContext context) {
           text: 'Go Anonymous',
           onPressed: () async {
             var result = await Navigator.of(context)
-                .pushNamed('/second', arguments: 'I am coming!');
+                .pushNamed(Routes.stackPage, arguments: 'I am coming!');
             if (result is String) {
               showDialog(
                 context: context,
