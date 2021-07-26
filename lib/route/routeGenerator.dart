@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'day1/expanded.dart';
-import 'sign_in/sign_in_page.dart';
+import '../app/day1/expanded.dart';
+import '../app/sign_in/sign_in_page.dart';
+import 'routeConstant.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
-      case '/':
+      case Routes.home:
         return MaterialPageRoute(builder: (_) => SignInPage());
-      case '/second':
+      case Routes.secondPage:
         if (args is String)
           return MaterialPageRoute(builder: (_) => ExpandPage(data: args));
         return MaterialPageRoute(builder: (_) => ErrorRoute());

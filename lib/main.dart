@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_again/app/routeGenerator.dart';
-import 'package:flutter_again/app/sign_in/sign_in_page.dart';
+import 'package:flutter_again/route/routeGenerator.dart';
 
 void main() {
   runApp(MyApp());

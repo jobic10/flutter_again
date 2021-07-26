@@ -75,9 +75,17 @@ Widget _buildContent(BuildContext context) {
         ),
         SignInButton(
           text: 'Go Anonymous',
-          onPressed: () {
-            Navigator.of(context)
+          onPressed: () async {
+            var result = await Navigator.of(context)
                 .pushNamed('/second', arguments: 'I am coming!');
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                title: Text(
+                  result.toString(),
+                ),
+              ),
+            );
           },
           foreColor: Colors.white,
           backColor: Colors.lime.shade400,
