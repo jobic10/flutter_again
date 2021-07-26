@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_again/app/sign_in/sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
@@ -12,12 +11,12 @@ class SignInPage extends StatelessWidget {
         elevation: 2,
       ),
       backgroundColor: Colors.grey[200],
-      body: _buildContent(),
+      body: _buildContent(context),
     );
   }
 }
 
-Widget _buildContent() {
+Widget _buildContent(BuildContext context) {
   return Padding(
     padding: EdgeInsets.all(
       16.0,
@@ -76,7 +75,9 @@ Widget _buildContent() {
         ),
         SignInButton(
           text: 'Go Anonymous',
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed('/second');
+          },
           foreColor: Colors.white,
           backColor: Colors.lime.shade400,
         ),
