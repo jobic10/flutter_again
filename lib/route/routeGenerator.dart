@@ -4,6 +4,7 @@ import '../app/day1/stack_and_positioned.dart';
 import '../app/day1/expanded2.dart';
 import '../app/day1/stack_assignment.dart';
 import '../app/sign_in/sign_in_page.dart';
+import '../app/day1/padding.dart';
 import 'routeConstant.dart';
 
 class RouteGenerator {
@@ -22,6 +23,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => ExpandedAssignment());
       case Routes.stackPage2:
         return MaterialPageRoute(builder: (_) => StackAssignment());
+      case Routes.paddingPage:
+        return MaterialPageRoute(builder: (_) => PaddingPage());
       default:
         return MaterialPageRoute(builder: (_) => ErrorRoute());
     }
