@@ -59,7 +59,9 @@ Widget _buildContent(BuildContext context) {
         ),
         SignInButton(
           text: 'Sign in with Email',
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed(Routes.stackPage);
+          },
           foreColor: Colors.white,
           backColor: Colors.teal.shade400,
         ),
