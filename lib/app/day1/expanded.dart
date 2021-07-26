@@ -15,19 +15,17 @@ class ExpandPage extends StatelessWidget {
           Expanded(
             child: Container(
               color: Colors.green,
-              height: 200,
             ),
           ),
           Expanded(
+            flex: 2,
             child: Container(
               color: Colors.white,
-              height: 200,
             ),
           ),
           Expanded(
             child: Container(
               color: Colors.green,
-              height: 200,
             ),
           ),
         ],
