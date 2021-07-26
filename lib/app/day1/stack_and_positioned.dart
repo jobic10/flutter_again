@@ -19,22 +19,50 @@ class StackAndPosition extends StatelessWidget {
                   width: 400,
                   height: 400,
                   child: Container(
-                    color: Colors.red,
+                    color: Colors.white,
                   ),
                 ),
-                SizedBox(
-                  width: 300,
-                  height: 300,
-                  child: Container(
-                    color: Colors.green,
-                  ),
+                // SizedBox(
+                //   width: 300,
+                //   height: 300,
+                //   child: Container(
+                //     color: Colors.green,
+                //   ),
+                // ),
+                // SizedBox(
+                //   width: 150,
+                //   height: 150,
+                //   child: Container(
+                //     color: Colors.blue,
+                //   ),
+                // ),
+                Positioned(
+                  child: Container(color: Colors.purple),
+                  height: 150,
+                  width: 150,
+                  left: 30,
+                  top: 30,
                 ),
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: Container(
-                    color: Colors.blue,
-                  ),
+                Positioned(
+                  child: Container(color: Colors.green),
+                  height: 150,
+                  width: 150,
+                  right: 40,
+                  top: 50,
+                ),
+                Positioned(
+                  child: Container(color: Colors.blue),
+                  height: 150,
+                  width: 150,
+                  left: 50,
+                  bottom: 80,
+                ),
+                Positioned(
+                  child: Container(color: Color(0xFFFF0000)),
+                  height: 150,
+                  width: 150,
+                  right: 30,
+                  bottom: 60,
                 ),
               ],
             )));
