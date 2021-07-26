@@ -13,12 +13,10 @@ class PaddingPage extends StatelessWidget {
           _buildBox(
             text: 'First',
             color: Colors.green,
-            shadowColor: Colors.green.shade100,
           ),
           _buildBox(
             text: 'Second',
             color: Colors.red,
-            shadowColor: Colors.green.shade100,
           ),
         ],
       ),
@@ -29,7 +27,6 @@ class PaddingPage extends StatelessWidget {
 Widget _buildBox({
   required String text,
   required Color color,
-  required Color shadowColor,
 }) {
   return Container(
     color: color.withAlpha(90),
