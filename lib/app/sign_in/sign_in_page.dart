@@ -50,7 +50,9 @@ Widget _buildContent(BuildContext context) {
         SignInButton(
           text: 'Sign in with Facebook',
           imagePath: 'asset/images/facebook.png',
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed(Routes.stackPage2);
+          },
           foreColor: Colors.white,
           backColor: Color(0xFF304D90),
         ),
