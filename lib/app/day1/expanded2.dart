@@ -172,7 +172,7 @@ class ExpandedAssignment extends StatelessWidget {
             color: Colors.brown,
           ),
           Expanded(
-            flex: 3,
+            flex: 5,
             child: Row(
               children: [
                 _buildBox(
@@ -184,6 +184,7 @@ class ExpandedAssignment extends StatelessWidget {
                   child: Column(
                     children: [
                       Expanded(
+                        flex: 2,
                         child: Row(
                           children: [
                             Expanded(
