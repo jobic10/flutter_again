@@ -11,12 +11,15 @@ class ExpandedAssignment extends StatelessWidget {
       ),
       body: Column(
         children: [
-          _buildBox(points: 8, color: Colors.red),
+          _buildBox(color: Colors.red, flex: 8),
           Expanded(
             flex: 5,
             child: Row(
               children: [
-                _buildBox(points: 5, color: Colors.indigo),
+                _buildBox(
+                  color: Colors.indigo,
+                  flex: 5,
+                ),
                 Expanded(
                   flex: 3,
                   child: Column(
@@ -26,19 +29,18 @@ class ExpandedAssignment extends StatelessWidget {
                         child: Row(
                           children: [
                             Expanded(
-                              flex: 1,
                               child: Column(
                                 children: [
-                                  _buildBox(points: 1, color: Colors.green),
-                                  _buildBox(points: 1, color: Colors.blue),
+                                  _buildBox(color: Colors.lightGreen, flex: 1),
+                                  _buildBox(color: Colors.blue, flex: 1),
                                 ],
                               ),
                             ),
-                            _buildBox(points: 2, color: Colors.brown),
+                            _buildBox(color: Colors.brown, flex: 2),
                           ],
                         ),
                       ),
-                      _buildBox(points: 3, color: Colors.purple),
+                      _buildBox(color: Colors.purple, flex: 3),
                     ],
                   ),
                 ),
@@ -51,16 +53,20 @@ class ExpandedAssignment extends StatelessWidget {
   }
 }
 
-Widget _buildBox({required Color color, required int points}) {
+Widget _buildBox({required Color color, required int flex}) {
   return Expanded(
-    flex: points,
+    flex: flex,
     child: Container(
       constraints: BoxConstraints.expand(),
       color: color,
       child: Center(
         child: Text(
-          '$points',
-          style: TextStyle(fontSize: 32.0, color: Colors.white),
+          '$flex',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+          ),
         ),
       ),
     ),
