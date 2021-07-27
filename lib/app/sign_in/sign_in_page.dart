@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_again/app/day2/theme.dart';
 import 'package:flutter_again/app/sign_in/sign_in_button.dart';
 import 'package:flutter_again/route/routeConstant.dart';
 
@@ -10,6 +11,14 @@ class SignInPage extends StatelessWidget {
         title: Text('Dear Mother'),
         centerTitle: true,
         elevation: 2,
+        actions: [
+          IconButton(
+            onPressed: () {
+              currentTheme.toggleTheme();
+            },
+            icon: Icon(Icons.brightness_4_rounded),
+          ),
+        ],
       ),
       backgroundColor: Colors.grey[200],
       body: _buildContent(context),
