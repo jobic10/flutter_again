@@ -14,6 +14,7 @@ class CustomTheme with ChangeNotifier {
     return ThemeData(
       primaryColor: Colors.lightBlue,
       backgroundColor: Colors.white,
+      accentColor: Colors.white,
       scaffoldBackgroundColor: Colors.white,
       textTheme: TextTheme(
         headline1: TextStyle(color: Colors.black),

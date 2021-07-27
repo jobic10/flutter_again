@@ -8,7 +8,10 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dear Mother'),
+        title: Text(
+          'Dear Mother',
+          style: TextStyle(color: Theme.of(context).accentColor),
+        ),
         centerTitle: true,
         elevation: 2,
         actions: [
