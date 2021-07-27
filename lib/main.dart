@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_again/route/routeGenerator.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app/day2/theme.dart';
 
 void main() {
@@ -22,13 +23,16 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Again',
-      initialRoute: '/',
-      onGenerateRoute: RouteGenerator.generateRoute,
-      theme: CustomTheme.lightTheme,
-      darkTheme: CustomTheme.darkTheme,
-      themeMode: currentTheme.currentTheme,
+    return ScreenUtilInit(
+      designSize: Size(392.7, 825.5),
+      builder: () => MaterialApp(
+        title: 'Flutter Again',
+        initialRoute: '/',
+        onGenerateRoute: RouteGenerator.generateRoute,
+        theme: CustomTheme.lightTheme,
+        darkTheme: CustomTheme.darkTheme,
+        themeMode: currentTheme.currentTheme,
+      ),
     );
   }
 }
