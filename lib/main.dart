@@ -25,7 +25,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-
     return ScreenUtilInit(
       designSize: Size(392.7, 825.5),
       builder: () => MaterialApp(

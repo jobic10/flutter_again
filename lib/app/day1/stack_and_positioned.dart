@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StackAndPosition extends StatelessWidget {
   const StackAndPosition({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print('My Size : -> ${MediaQuery.of(context).size}');
     return Scaffold(
         appBar: AppBar(
           title: Text('Stack and Position Widget'),
         ),
         body: Container(
             color: Colors.tealAccent,
-            height: MediaQuery.of(context).size.height / 2,
+            height: (MediaQuery.of(context).size.height / 2.sp).h,
             child: Stack(
               alignment: Alignment.center,
               children: [
                 SizedBox(
-                  width: 400,
-                  height: 400,
+                  width: 400.w,
+                  height: 400.h,
                   child: Container(
                     color: Colors.white,
                   ),
@@ -38,24 +40,24 @@ class StackAndPosition extends StatelessWidget {
                 // ),
                 Positioned(
                   child: Container(color: Colors.purple),
-                  height: 150,
-                  width: 150,
-                  left: 30,
-                  top: 30,
+                  height: 150.h,
+                  width: 150.w,
+                  left: 30.w,
+                  top: 30.h,
                 ),
                 Positioned(
                   child: Container(color: Colors.green),
-                  height: 150,
-                  width: 150,
-                  right: 40,
-                  top: 50,
+                  height: 150.h,
+                  width: 150.w,
+                  right: 40.w,
+                  top: 50.h,
                 ),
                 Positioned(
                   child: Container(color: Colors.blue),
-                  height: 150,
-                  width: 150,
-                  left: 50,
-                  bottom: 80,
+                  height: 150.h,
+                  width: 150.w,
+                  left: 50.w,
+                  bottom: 80.h,
                 ),
                 Positioned(
                   child: Container(
@@ -64,15 +66,15 @@ class StackAndPosition extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Container(
                         color: Colors.brown,
-                        height: 50,
-                        width: 50,
+                        height: 50.h,
+                        width: 50.w,
                       ),
                     ),
                   ),
-                  height: 150,
-                  width: 150,
-                  right: 30,
-                  bottom: 60,
+                  height: 150.h,
+                  width: 150.w,
+                  right: 30.w,
+                  bottom: 60.h,
                 ),
               ],
             )));
