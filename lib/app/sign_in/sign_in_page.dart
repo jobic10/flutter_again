@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_again/app/day2/theme.dart';
 import 'package:flutter_again/app/sign_in/sign_in_button.dart';
+import 'package:flutter_again/day3/layout_builder.dart';
 import 'package:flutter_again/route/routeConstant.dart';
 
 class SignInPage extends StatelessWidget {
@@ -33,84 +34,87 @@ Widget _buildContent(BuildContext context) {
     padding: EdgeInsets.all(
       16.0,
     ),
-    child: Column(
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(
-            bottom: 48,
-          ),
-          child: Text(
-            'Sign In',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.w600,
+    child: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(
+              bottom: 48,
+            ),
+            child: Text(
+              'Sign In',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
-        ),
-        SignInButton(
-          text: 'Sign in with Google',
-          imagePath: 'asset/images/gmail.png',
-          onPressed: () {},
-          backColor: Colors.white,
-          foreColor: Color(0xFFBB3311),
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        SignInButton(
-          text: 'Sign in with Facebook',
-          imagePath: 'asset/images/facebook.png',
-          onPressed: () {
-            Navigator.of(context).pushNamed(Routes.paddingPage);
-          },
-          foreColor: Colors.white,
-          backColor: Color(0xFF304D90),
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        SignInButton(
-          text: 'Sign in with Email',
-          onPressed: () {
-            Navigator.of(context).pushNamed(Routes.stackPage);
-          },
-          foreColor: Colors.white,
-          backColor: Colors.teal.shade400,
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        Text(
-          'Or',
-          style: TextStyle(fontSize: 14, color: Colors.black87),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        SignInButton(
-          text: 'Go Anonymous',
-          onPressed: () async {
-            var result = await Navigator.of(context)
-                .pushNamed(Routes.expandedPage2, arguments: 'I am coming!');
-            if (result is String) {
-              showDialog(
-                context: context,
-                builder: (context) => AlertDialog(
-                  title: Text(
-                    result,
+          SignInButton(
+            text: 'Sign in with Google',
+            imagePath: 'asset/images/gmail.png',
+            onPressed: () {},
+            backColor: Colors.white,
+            foreColor: Color(0xFFBB3311),
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          SignInButton(
+            text: 'Sign in with Facebook',
+            imagePath: 'asset/images/facebook.png',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => LayoutBuilderScreen()));
+            },
+            foreColor: Colors.white,
+            backColor: Color(0xFF304D90),
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          SignInButton(
+            text: 'Sign in with Email',
+            onPressed: () {
+              Navigator.of(context).pushNamed(Routes.stackPage);
+            },
+            foreColor: Colors.white,
+            backColor: Colors.teal.shade400,
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Text(
+            'Or',
+            style: TextStyle(fontSize: 14, color: Colors.black87),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          SignInButton(
+            text: 'Go Anonymous',
+            onPressed: () async {
+              var result = await Navigator.of(context)
+                  .pushNamed(Routes.expandedPage2, arguments: 'I am coming!');
+              if (result is String) {
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    title: Text(
+                      result,
+                    ),
                   ),
-                ),
-              );
-            }
-          },
-          foreColor: Colors.white,
-          backColor: Colors.lime.shade400,
-        ),
-      ],
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      mainAxisAlignment: MainAxisAlignment.center,
+                );
+              }
+            },
+            foreColor: Colors.white,
+            backColor: Colors.lime.shade400,
+          ),
+        ],
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
+      ),
     ),
   );
 }
