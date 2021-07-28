@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_again/app/day2/theme.dart';
 import 'package:flutter_again/app/sign_in/sign_in_button.dart';
+import 'package:flutter_again/day3/clay_container.dart';
 import 'package:flutter_again/day3/custom_button.dart';
 import 'package:flutter_again/route/routeConstant.dart';
 
@@ -65,7 +66,7 @@ Widget _buildContent(BuildContext context) {
             imagePath: 'asset/images/facebook.png',
             onPressed: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => CustomButton()));
+                  .push(MaterialPageRoute(builder: (_) => ClayContainerPage()));
             },
             foreColor: Colors.white,
             backColor: Color(0xFF304D90),
