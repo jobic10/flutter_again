@@ -67,7 +67,7 @@ class StackAndPosition extends StatelessWidget {
                   child: Container(
                     color: Colors.brown,
                     height: 50.h,
-                    width: 50.w,
+                    width: 50.h,
                   ),
                 ),
               ),
