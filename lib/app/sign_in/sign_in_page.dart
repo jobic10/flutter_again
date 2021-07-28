@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_again/app/day2/theme.dart';
 import 'package:flutter_again/app/sign_in/sign_in_button.dart';
-import 'package:flutter_again/day3/layout_builder.dart';
+import 'package:flutter_again/day3/layout_exercise.dart';
 import 'package:flutter_again/route/routeConstant.dart';
 
 class SignInPage extends StatelessWidget {
@@ -65,7 +65,7 @@ Widget _buildContent(BuildContext context) {
             imagePath: 'asset/images/facebook.png',
             onPressed: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => LayoutBuilderScreen()));
+                  MaterialPageRoute(builder: (_) => LayoutBuilderExercise()));
             },
             foreColor: Colors.white,
             backColor: Color(0xFF304D90),
