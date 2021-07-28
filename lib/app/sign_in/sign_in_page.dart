@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_again/app/day2/theme.dart';
 import 'package:flutter_again/app/sign_in/sign_in_button.dart';
+import 'package:flutter_again/day3/gradient.dart';
 import 'package:flutter_again/day3/layout_exercise.dart';
 import 'package:flutter_again/route/routeConstant.dart';
 
@@ -64,8 +65,8 @@ Widget _buildContent(BuildContext context) {
             text: 'Sign in with Facebook',
             imagePath: 'asset/images/facebook.png',
             onPressed: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => LayoutBuilderExercise()));
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => GradientPage()));
             },
             foreColor: Colors.white,
             backColor: Color(0xFF304D90),
