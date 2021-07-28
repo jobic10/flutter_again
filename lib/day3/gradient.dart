@@ -17,19 +17,15 @@ class GradientPage extends StatelessWidget {
             borderRadius: BorderRadius.all(
               Radius.circular(20),
             ),
-            gradient: RadialGradient(
+            gradient: SweepGradient(
               colors: [
                 Colors.red,
                 Colors.yellow,
                 Colors.brown,
                 Colors.green.withOpacity(0.2),
               ],
-              stops: [
-                0.6,
-                0.8,
-                0.81,
-                0.8,
-              ],
+
+              // radius: 0.6,
             ),
           ),
         ),
