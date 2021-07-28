@@ -30,7 +30,7 @@ class CustomButton extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  width: 120,
+                  width: 130,
                   height: 60,
                   padding: EdgeInsets.only(
                     top: 20,
