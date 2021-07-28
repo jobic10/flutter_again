@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_again/route/routeGenerator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app/day2/theme.dart';
@@ -23,6 +24,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
     return ScreenUtilInit(
       designSize: Size(392.7, 825.5),
       builder: () => MaterialApp(
