@@ -240,38 +240,6 @@ class _ClayContainerPageState extends State<ClayContainerPage> {
     );
   }
 
-  Widget listItem2() {
-    return Padding(
-      padding: const EdgeInsets.all(8),
-      child: ClayContainer(
-        width: MediaQuery.of(context).size.width * .7,
-        borderRadius: 12,
-        color: primaryColor,
-        child: Padding(
-          padding: EdgeInsets.all(6),
-          child: ListTile(
-            leading: Icon(Icons.tv, color: Colors.white, size: 34),
-            title: Text(
-              'Smart TV',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-              ),
-            ),
-            subtitle: Text(
-              'Sony Bravia ED-09IU7',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
   Widget circularTempSlider() {
     return ClayContainer(
       height: 200,
