@@ -36,8 +36,17 @@ class _ClayContainerPageState extends State<ClayContainerPage> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  listItem1(),
-                  listItem2(),
+                  listItem(
+                    title: 'Air Conditioner',
+                    subtitle: 'Panasonic CS-683683',
+                    icon: Icons.tablet,
+                    isActive: true,
+                  ),
+                  listItem(
+                    title: 'Smart TV',
+                    subtitle: 'Sony Bravia 72.82h',
+                    icon: Icons.tv,
+                  )
                 ],
               )),
           SizedBox(
@@ -68,6 +77,7 @@ class _ClayContainerPageState extends State<ClayContainerPage> {
               mainAxisSpacing: 16,
               staggeredTiles: [
                 StaggeredTile.count(2, 2),
+                StaggeredTile.count(1, 1),
                 StaggeredTile.count(1, 1),
                 StaggeredTile.count(1, 1),
                 StaggeredTile.count(1, 1),
@@ -175,7 +185,12 @@ class _ClayContainerPageState extends State<ClayContainerPage> {
         ));
   }
 
-  Widget listItem1() {
+  Widget listItem({
+    required String title,
+    required String subtitle,
+    required IconData icon,
+    bool isActive = false,
+  }) {
     return Container(
       padding: EdgeInsets.all(16),
       child: ClayContainer(
@@ -184,24 +199,26 @@ class _ClayContainerPageState extends State<ClayContainerPage> {
         borderRadius: 12,
         color: primaryColor,
         child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                activeColor1,
-                activeColor2,
-              ],
-            ),
-            borderRadius: BorderRadius.circular(12),
-          ),
+          decoration: isActive
+              ? BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      activeColor1,
+                      activeColor2,
+                    ],
+                  ),
+                  borderRadius: BorderRadius.circular(12),
+                )
+              : null,
           child: Padding(
             padding: EdgeInsets.all(12),
             child: ListTile(
               leading: Icon(
-                Icons.tablet,
+                icon,
                 color: Colors.white,
               ),
               subtitle: Text(
-                'Panasonic CS-7827',
+                subtitle,
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
@@ -209,7 +226,7 @@ class _ClayContainerPageState extends State<ClayContainerPage> {
                 ),
               ),
               title: Text(
-                'Air Conditioner',
+                title,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
