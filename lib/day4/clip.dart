@@ -31,10 +31,14 @@ class MyClip extends StatelessWidget {
 class WaveClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    debugPrint(size.toString());
+    print("Height : ${size.height} and Width is ${size.width}");
     var path = Path();
     path.lineTo(0, size.height);
-    path.lineTo(size.width, 0);
+
+    // path.quadraticBezierTo(
+    //     size.width / 2, size.height / 2, size.width / 1.4, size.height / 1.33);
+    path.quadraticBezierTo(0, 0, size.width, 0);
+    // path.lineTo(size.width, 0);
     path.close();
     return path;
   }
