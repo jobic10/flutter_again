@@ -149,10 +149,15 @@ class _ClayContainerPageState extends State<ClayContainerPage> {
               child: Padding(
                 padding: EdgeInsets.all(4),
                 child: Center(
-                  child: Icon(
-                    Icons.arrow_back,
-                    color: Colors.white,
-                    size: 32,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                      size: 32,
+                    ),
                   ),
                 ),
               ),
