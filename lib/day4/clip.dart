@@ -52,7 +52,6 @@ class WaveClipper extends CustomClipper<Path> {
         secondEndPoint.dx, secondEndPoint.dy);
     print('Line to ${size.width} and y is ${size.height}');
     print('Line to ${size.width} and y is ${size.height - 40}');
-    path.lineTo(size.width, size.height - 40);
 
     path.lineTo(size.width, 0);
     path.close();
