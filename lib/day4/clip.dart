@@ -19,7 +19,18 @@ class MyClip extends StatelessWidget {
                 ),
                 clipper: WaveClipper(),
               ),
-              opacity: 0.5,
+              opacity: 0.4,
+            ),
+            Opacity(
+              child: ClipPath(
+                child: Container(
+                  height: 280,
+                  width: double.infinity,
+                  color: Colors.deepOrangeAccent,
+                ),
+                clipper: WaveClipper(),
+              ),
+              opacity: 1,
             ),
           ],
         ),
