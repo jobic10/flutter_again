@@ -15,7 +15,14 @@ class MyClip extends StatelessWidget {
                 child: Container(
                   height: 300,
                   width: double.infinity,
-                  color: Colors.deepOrangeAccent,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 30,
+                      color: Colors.red,
+                      style: BorderStyle.solid,
+                    ),
+                  ),
                 ),
                 clipper: WaveClipper(),
               ),
@@ -24,9 +31,17 @@ class MyClip extends StatelessWidget {
             Opacity(
               child: ClipPath(
                 child: Container(
-                  height: 280,
+                  height: 296,
                   width: double.infinity,
-                  color: Colors.deepOrangeAccent,
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrangeAccent,
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.green,
+                        Colors.purple,
+                      ],
+                    ),
+                  ),
                 ),
                 clipper: WaveClipper(),
               ),
