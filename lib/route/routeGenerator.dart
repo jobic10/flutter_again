@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_again/day5/generators.dart';
 import '../app/day1/expanded.dart';
 import '../app/day1/stack_and_positioned.dart';
 import '../app/day1/expanded2.dart';
@@ -25,6 +26,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => StackAssignment());
       case Routes.paddingPage:
         return MaterialPageRoute(builder: (_) => PaddingPage());
+      case Routes.genPage:
+        return MaterialPageRoute(builder: (_) => GenApp());
       default:
         return MaterialPageRoute(builder: (_) => ErrorRoute());
     }

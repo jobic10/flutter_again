@@ -30,6 +30,10 @@ class SignInPage extends StatelessWidget {
 }
 
 Widget _buildContent(BuildContext context) {
+  void push(String path) {
+    Navigator.of(context).pushNamed(path);
+  }
+
   return Padding(
     padding: EdgeInsets.all(
       16.0,
@@ -49,6 +53,15 @@ Widget _buildContent(BuildContext context) {
                 fontWeight: FontWeight.w600,
               ),
             ),
+          ),
+          SignInButton(
+            text: 'Recent',
+            onPressed: () => push(Routes.genPage),
+            backColor: Colors.lightBlue,
+            foreColor: Colors.white,
+          ),
+          SizedBox(
+            height: 8,
           ),
           SignInButton(
             text: 'Sign in with Google',
