@@ -28,17 +28,22 @@ class GenApp extends StatelessWidget {
         title: Text('Generator Functions'),
       ),
       body: Container(
+        width: double.infinity,
+        padding: EdgeInsets.all(20),
         color: Colors.green,
         child: Column(
           children: [
             FutureBuilder(
               future: fetchDouble(10),
-              builder: (context, snapshot) => Text(snapshot.data.toString()),
+              builder: (context, snapshot) => snapshot.hasData
+                  ? Text(snapshot.data.toString())
+                  : CircularProgressIndicator(),
             ),
             StreamBuilder(
               builder: (context, snapshot) => Text(
                 snapshot.data.toString(),
               ),
+              stream: getRange(1, 10),
             ),
           ],
         ),
