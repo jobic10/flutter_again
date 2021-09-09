@@ -1,8 +1,20 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-Iterable<int> getRange(int start, int finish) sync* {
+Future<int> fetchDouble(int val) async {
+  Random rand = Random();
+  await Future.delayed(
+    Duration(
+      seconds: rand.nextInt(10),
+    ),
+  );
+  return val * 2;
+}
+
+Stream<int> getRange(int start, int finish) async* {
   for (int i = start; i <= finish; i++) {
-    yield i;
+    yield await fetchDouble(i);
   }
 }
 
@@ -17,10 +29,18 @@ class GenApp extends StatelessWidget {
       ),
       body: Container(
         color: Colors.green,
-        child: StreamBuilder(
-          builder: (context, snapshot) => Text(
-            snapshot.data.toString(),
-          ),
+        child: Column(
+          children: [
+            FutureBuilder(
+              future: fetchDouble(10),
+              builder: (context, snapshot) => Text(snapshot.data.toString()),
+            ),
+            StreamBuilder(
+              builder: (context, snapshot) => Text(
+                snapshot.data.toString(),
+              ),
+            ),
+          ],
         ),
       ),
     );
