@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 Future<int> fetchDouble(int val) async {
@@ -18,11 +17,16 @@ Stream<int> getRange(int start, int finish) async* {
   }
 }
 
+extension on List<int> {
+  int get sum => fold(0, (a, b) => a + b);
+}
+
 class GenApp extends StatelessWidget {
   const GenApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var extension_res = [1, 2, 3, 4].sum;
     return Scaffold(
       appBar: AppBar(
         title: Text('Generator Functions'),
@@ -33,6 +37,7 @@ class GenApp extends StatelessWidget {
         color: Colors.green,
         child: Column(
           children: [
+            Text('$extension_res'),
             FutureBuilder(
               future: fetchDouble(10),
               builder: (context, snapshot) => snapshot.hasData
