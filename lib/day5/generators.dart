@@ -26,7 +26,7 @@ class GenApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var extension_res = [1, 2, 3, 4].sum;
+    var extensionRes = [1, 2, 3, 4].sum;
     return Scaffold(
       appBar: AppBar(
         title: Text('Generator Functions'),
@@ -37,7 +37,7 @@ class GenApp extends StatelessWidget {
         color: Colors.green,
         child: Column(
           children: [
-            Text('$extension_res'),
+            Text('$extensionRes'),
             FutureBuilder(
               future: fetchDouble(10),
               builder: (context, snapshot) => snapshot.hasData
